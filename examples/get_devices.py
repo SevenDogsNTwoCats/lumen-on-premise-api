@@ -16,7 +16,7 @@ def main():
 
     devices = device_client.get_all_devices()
     print("\n--- Dispositivos Obtenidos ---")
-    print("Tipo  | ID                                   | Nombre")
+    print("Tipo   | ID                                   | Nombre")
     for device in devices.get("data", []):
         print(f"{device['id']['entityType']} | {device['id']['id']} | {device['name']}")
 
