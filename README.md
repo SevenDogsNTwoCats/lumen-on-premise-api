@@ -20,7 +20,7 @@ This project provides a Python client implementation and usage examples for inte
 
 1. Clone the repository:
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/SevenDogsNTwoCats/lumen-on-premise-api
    cd lumen-on-premise-api
    ```
 2. Install dependencies:
@@ -45,7 +45,7 @@ Example scripts are provided in the `examples/` directory:
 
 Run any example script:
 ```sh
-python examples/get_assets.py
+python -m examples.get_assets
 ```
 
 ## Project Structure
