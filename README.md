@@ -63,6 +63,9 @@ examples/
     get_devices.py    # Example: device operations
     get_telemetry.py  # Example: telemetry operations
     get_tokens.py     # Example: token retrieval
+    get_asset_devices # Example: Get Devices related to an Asset
+    get_WM_telemetry  # Example: Get Water Meter Telemetry for each Asset
+    get_EM_telemetry  # Example: Get Energy Meter Telemetry for each Asset
 ```
 
 ## Documentation
