@@ -53,3 +53,28 @@ class RelationClient:
             return response.json()
         else:
             raise Exception(f"Error al obtener relaciones hacia entidad: {response.status_code} - {response.text}")
+
+    def get_relations_info(self, parameters: dict, filters: list = None):
+        """
+        Get detailed relations info using a POST body.
+        Args:
+            parameters (dict): Parameters for the query (rootId, rootType, direction, etc).
+            filters (list, optional): List of filter dicts.
+        Returns:
+            dict: JSON response containing relations info.
+        Raises:
+            Exception: If the request fails.
+        """
+        url = f"{BASE_URL}/api/relations/info"
+        headers = self.auth_client.get_headers()
+        headers["Content-Type"] = "application/json"
+        body = {
+            "parameters": parameters,
+            "filters": filters if filters is not None else []
+        }
+        response = requests.post(url, json=body, headers=headers)
+
+        if response.status_code == 200:
+            return response.json()
+        else:
+            raise Exception(f"Error al obtener info de relaciones: {response.status_code} - {response.text}")
