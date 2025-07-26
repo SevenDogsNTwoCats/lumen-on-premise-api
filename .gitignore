@@ -2,3 +2,5 @@
 .venv/
 __pycache__/
 *.pyc
+em_telemetry.csv
+wm_telemetry.csv
