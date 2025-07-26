@@ -41,11 +41,11 @@ def main():
 
     try:
         relations_info = relation_client.get_relations_info(parameters, filters)
-        print("Type   | id")
+        print("Tipo   | ID                                   | Nombre")
         print("-------------------------------")
         for relation in relations_info:
             to_entity = relation.get('to', {})
-            print(f"{to_entity.get('entityType', 'Desconocida')} | {to_entity.get('id', 'Desconocida')}")
+            print(f"{to_entity.get('entityType', 'Desconocida')} | {to_entity.get('id', 'Desconocida')} | {relation.get('toName', 'Desconocida')}")
     except Exception as e:
         print(f"Error al obtener info de relaciones: {e}")
 
